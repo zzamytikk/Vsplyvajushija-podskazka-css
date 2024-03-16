@@ -1,0 +1,327 @@
+/*  ✪ https://zam.usite.pro/publ/1-1-0-1
+    ✫ Версия 1.0.0
+    © Copyright Плюшки для сайтов 2023
+*/
+/* 🢃🢃🢃 Всплывающая подсказка css (tooltip) 1.0.0 🢃🢃🢃 */
+/* #region */
+/* ⮟⮟⮟ ! ⮟⮟⮟ */
+/* #region */
+/* 🠗🠗🠗 * 🠗🠗🠗 */
+/* #region */
+[class*="inf-"],
+[class*="inf-"]::before,
+[class*="inf-"]::after {
+  --C-: #0000;
+  /* transparent */
+  position: relative;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  font-size: 14px
+}
+
+/* 🠕🠕🠕 * 🠕🠕🠕 */
+/* #endregion */
+
+[class*="inf-"] {
+  ---inf-C: var(---inf-C);
+  /* Цвет текста */
+  ---inf-bg: var(---inf-bg-93);
+  /* Цвет фона */
+  ---inf-br: var(---inf-C);
+  /* border 1px (Рамка + Стрелка) */
+  ---inf-b-shI: var(---inf-b-sh);
+  /* Цвет тени внутри контенера */
+  display: inline-block;
+  cursor: auto
+}
+
+[class*="inf-"]::before,
+[class*="inf-"]::after {
+  z-index: 998;
+  opacity: 0;
+  /* Подсказка невидима */
+  content: '';
+  display: block;
+  position: absolute;
+  user-select: none;
+  pointer-events: none;
+  /* Это предотвращает появление окна при наведении курсора на(::after/::before). */
+}
+
+[class*="inf-"]::before {
+  /* z-index: 2; */
+  border: 6px solid var(--C-)
+}
+
+[class*="inf-"]::after {
+  width: max-content;
+  /* Внутренняя максимальная предпочтительная ширина. (::after ::before Размер контенера по тексту до max-width) */
+  max-width: 170px;
+  /* Максимальная ширина подсказки */
+  padding: 4px;
+  /* Поля вокруг текста */
+  text-align: center;
+  /* Расположение текста */
+  font-size: .875rem;
+  /* Размер текста */
+  line-height: 1.1432;
+  /* Устанавливает интерлиньяж (межстрочный интервал) текста, отсчет ведется от базовой линии шрифта. */
+  font-weight: 400;
+  /* Толщина текста */
+  letter-spacing: .067rem;
+  /* Отступ между буквами */
+  box-sizing: unset;
+  /* определяет как вычисляется общая ширина и высота элемента. */
+  color: var(---inf-C);
+  /* Цвет текста */
+  background: var(---inf-bg);
+  /* Цвет фона */
+  border: 1px solid var(---inf-br);
+  /* Параметры рамки */
+  border-radius: 4px;
+  /* Скругления уголков рамки */
+  text-shadow: 1px 1px 1px #000;
+  /* Параметры тени текста */
+  box-shadow: 0 0 4px #000, inset 0 0 1px var(---inf-b-shI)
+    /* Параметры тени,  Параметры тени внутри */
+}
+
+/* 🠗🠗🠗 :hover 🠗🠗🠗 */
+/* #region */
+[class*="inf-"]:hover::before,
+[class*="inf-"]:hover::after {
+  opacity: 1;
+  /* Показываем подсказку */
+  transform: translate(0, 0);
+  transition: .3s;
+  /* Время появления подсказки */
+}
+
+[class*="inf-"]:hover::after {
+  content: attr(data-t);
+  /* Выводим текст ! Использавать тут ! (уберает полосу прокрутки, когда подсказка скрыта и не помещается) */
+  min-width: 100px;
+  /* Минимальная ширина подсказки ! Использавать тут ! (уберает полосу прокрутки, когда подсказка скрыта и не помещается) */
+  animation: infp .3s
+    /* Убираем дрожание стенок inf-::after */
+}
+
+@keyframes infp {
+  to {
+    padding: 4px
+  }
+}
+
+/* 🠕🠕🠕 :hover 🠕🠕🠕 */
+/* #endregion */
+/* ⮝⮝⮝ ! ⮝⮝⮝ */
+/* #endregion */
+
+/* ⮟⮟⮟ Открыть/Закрыть .inf-(X|O) ⮟⮟⮟ */
+/* #region */
+.inf-XO::after {
+  /* Закрыто */
+  content: 'Открыть/Закрыть' !important;
+  color: #bfb
+}
+
+/* ⮝⮝⮝ Открыть/Закрыть .inf-(X|O) ⮝⮝⮝ */
+/* #endregion */
+
+/* ⮟⮟⮟ Рамка + стрелка ⮟⮟⮟ */
+/* #region */
+/* 🠗🠗🠗 Лево|Право class=.inf-(L|R) 🠗🠗🠗 */
+/* #region */
+:is(.inf-R, .inf-L)::after,
+:is(.inf-R, .inf-L)::before {
+  /* Право, Лево */
+  top: 50%;
+  transform: translate(-9px, -50%)
+}
+
+.inf-R::before {
+  /* Право */
+  right: -11px;
+  border-right-color: var(---inf-br)
+}
+
+.inf-R::after {
+  left: calc(100% + 11px)
+}
+
+.inf-L::before {
+  /* Лево */
+  left: -11px;
+  border-left-color: var(---inf-br)
+}
+
+.inf-L::after {
+  right: calc(100% + 11px)
+}
+
+:is(.inf-R, .inf-L):hover::after,
+:is(.inf-R, .inf-L):hover::before {
+  /* Право, Лево */
+  transform: translate(0, -50%);
+}
+
+/* 🠕🠕🠕 Лево|Право class=.inf-(L|R) 🠕🠕🠕 */
+/* #endregion */
+
+/* 🠗🠗🠗 Верх|Низ class=.inf-(T|B) 🠗🠗🠗 */
+/* #region */
+:is(.inf-T, .inf-B)::after,
+:is(.inf-T, .inf-B)::before {
+  /* Верх, Низ */
+  left: 50%;
+  transform: translate(-50%, -10px)
+}
+
+[class*="inf-T"]::before {
+  /* Верх */
+  top: -11px;
+  border-top-color: var(---inf-br)
+}
+
+[class*="inf-T"]::after {
+  /* .inf-T .inf-TR .inf-TL */
+  bottom: calc(100% + 11px)
+}
+
+[class*="inf-B"]::before {
+  /* inf-B, inf-BL, inf-BR*/
+  bottom: -12px;
+  border-bottom-color: var(---inf-br)
+}
+
+[class*="inf-B"]::after {
+  /* inf-B, inf-BL, inf-BR*/
+  top: calc(100% + 12px)
+}
+
+:is(.inf-T, .inf-B):hover::after,
+:is(.inf-T, .inf-B):hover::before {
+  /* Верх, Низ */
+  transform: translate(-50%, 0)
+}
+
+/* 🠕🠕🠕 Верх|Низ class=.inf-(T|B) 🠕🠕🠕 */
+/* #endregion */
+
+/* 🠗🠗🠗 Право(Низ|Верх) class="inf-(BR|TR)", Лево(Низ|Верх) = class="inf-(BL|TL)" 🠗🠗🠗 */
+/* #region */
+:is(.inf-BL, .inf-BR, .inf-TL, .inf-TR)::before {
+  border: 10px solid var(--C-);
+  transform: translate(0, -10px)
+}
+
+:is(.inf-BL, .inf-BR, .inf-TL, .inf-TR)::after {
+  max-width: 200px;
+  transform: translate(0, -10px)
+}
+
+:is(.inf-BL, .inf-TL)::before {
+  left: 10px
+}
+
+:is(.inf-BR, .inf-TR)::before {
+  left: calc(100% - 30px)
+}
+
+:is(.inf-BR, .inf-TR)::after {
+  right: 0
+}
+
+:is(.inf-BL, .inf-TL)::after {
+  /* Коррекция когда есть padding */
+  left: 0;
+}
+
+.inf-BL::before {
+  border-left-color: var(---inf-br);
+  border-bottom: var(--C-)
+}
+
+.inf-TL::before {
+  border-left-color: var(---inf-br)
+}
+
+.inf-TR::before {
+  border-right-color: var(---inf-br)
+}
+
+.inf-BR::before {
+  border-right-color: var(---inf-br);
+  border-bottom: var(--C-)
+}
+
+:is(.inf-TL, .inf-TR)::before {
+  border-top: var(--C-)
+}
+
+/* 🠕🠕🠕 Право(Низ|Верх) class="inf-(BR|TR)", Лево(Низ|Верх) = class="inf-(BL|TL)" 🠕🠕🠕 */
+/* #endregion */
+/* ⮝⮝⮝ Рамка + стрелка ⮝⮝⮝ */
+/* #endregion */
+
+/* ⮟⮟⮟ .inf-c.. Цвета ⮟⮟⮟ */
+/* #region */
+.inf-c0 {
+  /*0~> Красный */
+  ---inf-C: #f44;
+  ---inf-bg-93: #200e;
+  ---inf-b-sh: #f448;
+}
+
+.inf-c1 {
+  /*1~> Зелёный */
+  ---inf-C: #0b0;
+  ---inf-bg-93: #020e;
+  ---inf-b-sh: #0b06;
+}
+
+.inf-c2 {
+  /*2~> Оранжевый */
+  ---inf-C: #f90;
+  ---inf-bg-93: #210e;
+  ---inf-b-sh: #f906;
+}
+
+.inf-c3 {
+  /*3~> Жёлтый */
+  ---inf-C: #dd0;
+  ---inf-bg-93: #220e;
+  ---inf-b-sh: #dd09;
+}
+
+.inf-c4 {
+  /*4~> Синий */
+  ---inf-C: #08f;
+  ---inf-bg-93: #012e;
+  ---inf-b-sh: #08f6;
+}
+
+.inf-c5 {
+  /*5~> Серый */
+  ---inf-C: #999;
+  ---inf-bg-93: #222e;
+  ---inf-b-sh: #8886;
+}
+
+.inf-c6 {
+  /*6~> Розовый */
+  ---inf-C: #f0f;
+  ---inf-bg-93: #202e;
+  ---inf-b-sh: #f0f6;
+}
+
+.inf-c7 {
+  /*7~> Океан */
+  ---inf-C: #0bb;
+  ---inf-bg-93: #022e;
+  ---inf-b-sh: #0bb6;}
+.inf-c8{---inf-C:#fff;---inf-bg-93:#012e;---inf-b-sh:#8886;---inf-br:#ccc}
+.inf-c9{---inf-C:#ddd;---inf-bg-93:#012e;---inf-b-sh:#999;---inf-br:#000}
