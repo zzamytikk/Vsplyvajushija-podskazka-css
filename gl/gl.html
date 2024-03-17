@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Всплывающая подсказка ✓ css</title>
+  <link rel="stylesheet" href="/gl/gl.css">
+  <link rel="stylesheet" href="/z.css">
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+  <link href="https://zam.usite.pro/css/z.css" rel="stylesheet">
+  <script src="https://zam.usite.pro/js/z-m.js" defer></script>
+  <script src="/gl/gl.js" defer></script>
+  <script src="z.js" defer></script>
+</head>
+<body class="tema9">
+  <header>
+    <div style="float: right;">
+      <select id="font">
+        <option value="8">8
+        <option value="10">10
+        <option value="12" selected>12
+        <option value="14">14
+        <option value="16">16
+        <option value="18">18
+      </select>
+      <button onclick="gl.bodyS.$()">scrol</button>
+      <button onclick="gl.tema.$()">bg</button>
+      <!-- <button id="m">☰</button> -->
+    </div>
+    <nav></nav>
+  </header>
+  <main>
+    <style>
+ .infOK > div {
+ width: 150px;/* Для оденакого центрования */
+ /* border: 1px solid #fff3 */
+ }
+
+ /* Покажем */
+ .infOK [class*="inf-"]::after,
+ .infOK [class*="inf-"]::before {z-index: 1;
+ opacity: 1;
+ }
+ .infOK [class*="inf-"]::after {
+ content: attr(data-t);
+ }
+ /* Центруем */
+ .infOK [class*="inf-"] {
+ position: absolute;
+ }
+ .infOK :is([class*="inf-T"]) {
+ top: 115%;
+ }
+ .infOK [class*="inf-B"] {
+ top: 25%;
+ }
+ .infOK :is([class*="inf-R"], [class*="inf-L"]) {
+ top: 50%;
+ }
+
+ .infOK :is([class*="inf-TR"], [class*="inf-BR"], .inf-L) {
+ left: 90%;
+ }
+ .infOK :is(.inf-T, .inf-B) {
+ left: 50%;
+ }
+ .infOK :is([class*="inf-TL"], [class*="inf-BL"], .inf-R){
+ left: 15%;
+ }
+ </style> 
+
+    <div class="ram-n1-1 ram-V1-1X infOK"><!-- ✂ Цветовой набор -->
+       <div>
+       <dl class="inf-TR inf-c0" data-t=".inf-TR .inf-c0"></dl>
+       </div>
+       <div>
+       <dl class="inf-T inf-c1" data-t=".inf-T .inf-c1"></dl>
+       </div>
+       <div>
+       <dl class="inf-TL inf-c2" data-t=".inf-TL .inf-c2"></dl>
+       </div>
+       <div>
+       <dl class="inf-L inf-c3" data-t="inf-L inf-c3"></dl>
+       </div>
+       <div>
+       <dl class="inf-BR inf-c4" data-t="inf-BR inf-c4"></dl>
+       </div>
+       <div>
+       <dl class="inf-R inf-c5" data-t="inf-R inf-c5"></dl>
+       </div>
+       <div>
+       <dl class="inf-B inf-c6" data-t="inf-B inf-c6"></dl>
+       </div>
+       <div>
+       <dl class="inf-BL inf-c7" data-t="inf-BL inf-c7"></dl>
+       </div>
+       <div>
+       <dl class="inf-T inf-c8" data-t="inf-T inf-c8"></dl>
+       </div>
+       <div>
+       <dl class="inf-T inf-c9" data-t="inf-T inf-c9"></dl>
+       </div>
+       </div>
+      
+    <p class="ram-V2 gI-inf all-c1">Обычный блок с текстом, который появляется при наведении на элемент(ссылки, кнопки и т.д).
+      Подсказка даёт более подробную информацию о содержимом элемента.</p>
+      
+    <br><h4 class="hr-n1 hr-L all-c8" style="---hr-Ct: var(--C)"><b>Добавим (html, css) подсказку:</b></h4>
+    <p>Для создания подсказки в HTML добавим к нужному элементу пользовательский атрибут <span class="cod-scb">data-t = </span><span class="cod-atr">"Текст подсказки"</span> с текстом подсказки.</p>
+    <p>Для выбора <u class="u-n0 all-c1">стороны появления</u> подсказки добавим в атрибут <span class="cod-scb">class</span>:</p>
+      
+    <div class="ram-n1-1 ram-V1 all-c1"><!-- ✂ Стороны поивления -->
+       <div class="inf-R inf-c8" data-t="Право центр">
+       <i>Право центр</i>
+       <b>class</b><p>inf-R</p>
+       </div>
+       <div class="inf-TL inf-c8" data-t="Верх слева на право">
+       <i>Верх слева на право</i>
+       <b>class</b><p>inf-TL</p>
+       </div>
+       <div class="inf-T inf-c8" data-t="Верх центр">
+       <i>Верх центр</i>
+       <b>class</b><p>inf-T</p>
+       </div>
+       <div class="inf-TR inf-c8" data-t="Верх справа на лево">
+       <i>Верх справа на лево</i>
+       <b>class</b><p>inf-TR</p>
+       </div>
+       <div class="inf-BR inf-c8" data-t="Низ справа на лево">
+       <i>Низ справа на лево</i>
+       <b>class</b><p>inf-BR</p>
+       </div>
+       <div class="inf-B inf-c8" data-t="Низ центр">
+       <i>Низ центр</i>
+       <b>class</b><p>inf-B</p>
+       </div>
+       <div class="inf-BL inf-c8" data-t="Низ слева на право">
+       <i>Низ слева на право</i>
+       <b>class</b><p>inf-BL</p>
+       </div>
+       <div class="inf-L inf-c8" data-t="Лево центр">
+       <i>Лево центр</i>
+       <b>class</b><p>inf-L</p>
+       </div>
+       </div>
+      
+    <p>Для выбора <u class="u-n0 all-c1">расцветки подсказки</u> добавим в атрибут <span class="cod-scb">class</span>:</p>
+      
+    <div class="ram-n1-1 ram-V1 all-c1"><!-- ✂ Цвета -->
+       <div class="inf-TL inf-c0" data-t="Красная .inf-с0">
+       <i>Красная</i>
+       <b>class</b><p>inf-c0</p>
+       </div>
+       <div class="inf-TL inf-c1" data-t="Зелёный .inf-с1">
+       <i>Зелёный</i>
+       <b>class</b><p>inf-c1</p>
+       </div>
+       <div class="inf-TL inf-c2" data-t="Оранжевый .inf-с2">
+       <i>Оранжевый</i>
+       <b>class</b><p>inf-c2</p>
+       </div>
+       <div class="inf-TL inf-c3" data-t="Жёлтый .inf-с3">
+       <i>Жёлтый</i>
+       <b>class</b><p>inf-c3</p>
+       </div>
+       <div class="inf-TL inf-c4" data-t="Синий .inf-с4">
+       <i>Синий</i>
+       <b>class</b><p>inf-c4</p>
+       </div>
+       <div class="inf-TL inf-c5" data-t="Серый .inf-с5">
+       <i>Серый</i>
+       <b>class</b><p>inf-c5</p>
+       </div>
+       <div class="inf-TL inf-c6" data-t="Розовый .inf-с6">
+       <i>Розовый</i>
+       <b>class</b><p>inf-c6</p>
+       </div>
+       <div class="inf-TL inf-c7" data-t="Океан .inf-с7">
+       <i>Океан</i>
+       <b>class</b><p>inf-c7</p>
+       </div>
+       <div class="inf-TL inf-c8" data-t="Белый .inf-с8">
+       <i>Белый</i>
+       <b>class</b><p>inf-c8</p>
+       </div>
+       <div class="inf-TL inf-c9" data-t="Чёрный .inf-с9">
+       <i>Чёрный</i>
+       <b>class</b><p>inf-c9</p>
+      </div>
+    </div>
+      
+    <!-- HTML пример -->
+    <pre id="cod" class="ram-n0 all-c5" data-ram-zag="HTML"><code class="v-BG0">
+      &lt;!-- Добавить в &lt;head>..&lt;/head> -->
+      &lt;link href="https://zam.usite.pro/db/publ/tooltipCSS/ok_1-0-0.css" rel="stylesheet">
+      &lt;!-- Всплывающая подсказка -->
+      &lt;dl class="inf-TL inf-c4" data-t="Пример появления • Верх лево">Наведи на меня мышку&lt;/dl>
+      </code></pre>
+  </main>
+  <footer></footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      $('#font').on('change', function () {
+        gl.font.$(this);
+      });
+    }, false);
+  </script>
+</body>
+</html>
+<!--
+    &nbsp;	Неразрывный пробел
+    &#8194;	Узкий пробел (еn-шириной в букву n)
+    &#8195;	Широкий пробел (em-шириной в букву m)
+< 	&lt;	  Знак "меньше чем" (начало тега)
+>	  &gt;	  Знак "больше чем" (конец тега)
+"	  &quot;	Двойная кавычка
+' 	&apos;	Апостроф (одинарная кавычка)
+-->
