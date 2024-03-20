@@ -5,9 +5,9 @@
 /* 🢃🢃🢃 Всплывающая подсказка css (tooltip) 1.0.0 🢃🢃🢃 *//* #region */
     /* ⮟⮟⮟ ! ⮟⮟⮟ *//* #region */
         /* 🠗🠗🠗 * 🠗🠗🠗 *//* #region */
-[class*="inf-"],
-[class*="inf-"]::before,
-[class*="inf-"]::after {
+[class*="1inf-"],
+[class*="1inf-"]::before,
+[class*="1inf-"]::after {
     --C-:#0000; /* transparent */
     position: relative;
     margin: 0;
@@ -25,7 +25,9 @@
     ---inf-br: var(---inf-C);/* border 1px (Рамка + Стрелка) */
     ---inf-b-shI: var(---inf-b-sh);/* Цвет тени внутри контенера */
     display: inline-block;
-    cursor: auto
+    cursor: auto;
+    box-sizing: border-box;
+    font-size: 1rem;
 }
 
 [class*="inf-"]::before,
@@ -38,7 +40,7 @@
 }
 
 [class*="inf-"]::before {/* z-index: 2; */
-    border: 6px solid var(--C-)
+    border: 6px solid #0000
 }
 
 [class*="inf-"]::after {
@@ -150,7 +152,7 @@
 
         /* 🠗🠗🠗 Право(Низ|Верх) class="inf-(BR|TR)", Лево(Низ|Верх) = class="inf-(BL|TL)" 🠗🠗🠗 *//* #region */
 :is(.inf-BL, .inf-BR, .inf-TL, .inf-TR)::before {
-    border: 10px solid var(--C-);
+    border: 10px solid #0000;
     transform: translate(0, -10px)
 }
 :is(.inf-BL, .inf-BR, .inf-TL, .inf-TR)::after {
@@ -175,7 +177,7 @@
 
 .inf-BL::before {
     border-left-color: var(---inf-br);
-    border-bottom: var(--C-)
+    border-bottom: #0000
 }
 .inf-TL::before {
     border-left-color: var(---inf-br)
@@ -186,11 +188,11 @@
 }
 .inf-BR::before {
     border-right-color: var(---inf-br);
-    border-bottom: var(--C-)
+    border-bottom: #0000
 }
 
 :is(.inf-TL, .inf-TR)::before {
-    border-top: var(--C-)
+    border-top: #0000
 }
         /* 🠕🠕🠕 Право(Низ|Верх) class="inf-(BR|TR)", Лево(Низ|Верх) = class="inf-(BL|TL)" 🠕🠕🠕 *//* #endregion */
     /* ⮝⮝⮝ Рамка + стрелка ⮝⮝⮝ *//* #endregion */
