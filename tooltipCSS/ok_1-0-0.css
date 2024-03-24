@@ -5,9 +5,9 @@
 /* 🢃🢃🢃 Всплывающая подсказка css (tooltip) 1.0.0 🢃🢃🢃 *//* #region */
     /* ⮟⮟⮟ ! ⮟⮟⮟ *//* #region */
         /* 🠗🠗🠗 * 🠗🠗🠗 *//* #region */
-[class*="1inf-"],
-[class*="1inf-"]::before,
-[class*="1inf-"]::after {
+[class*="inf-"],
+[class*="inf-"]::before,
+[class*="inf-"]::after {
     --C-:#0000; /* transparent */
     position: relative;
     margin: 0;
