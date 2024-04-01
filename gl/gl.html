@@ -5,32 +5,27 @@
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Всплывающая подсказка ✓ css</title>
-  <link rel="stylesheet" href="/gl/gl.css">
-  <link rel="stylesheet" !href="/tooltipCSS/ok_1-0-0.css">
-  <link rel="stylesheet" href="/tooltipCSS/m_1-0-0.css">
-
+  <style>
+    @import url("https://fonts.googleapis.com/css?family=Material+Icons|Comfortaa|Istok+Web:400,700&amp;subset=cyrillic");
+  </style>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+  
+  <!-- ucoz -->
   <link href="https://zam.usite.pro/css/z.css" rel="stylesheet">
-  <script src="https://zam.usite.pro/js/z-m.js" defer></script>
-  <script src="/gl/gl.js" defer></script>
+  <script src="https://zam.usite.pro/js/z.js" defer></script>
+  
+  <!-- Для шаблона www (Для всех шаблонов): -->
+  <link href="https://zam.usite.pro/db/all/Git/gl/gl.css" rel="stylesheet">
+  <script src="https://zam.usite.pro/db/all/Git/gl/gl.js" defer></script>
+  <!-- Для шаблона localhost: -->
+  <link !href="/gl/gl.css" rel="stylesheet">
+  <script !src="/gl/gl.js" defer></script>
+
+  <!-- Измени путь на свой проект: -->
+  <link href="/tooltipCSS/ok_1-0-0.css" rel="stylesheet">
 </head>
-<body class="tema9">
-  <header>
-    <div style="float: right;">
-      <select id="font">
-        <option value="8">8
-        <option value="10">10
-        <option value="12" selected>12
-        <option value="14">14
-        <option value="16">16
-        <option value="18">18
-      </select>
-      <button onclick="gl.bodyS.$()">scrol</button>
-      <button onclick="gl.tema.$()">bg</button>
-      <!-- <button id="m">☰</button> -->
-    </div>
-    <nav></nav>
-  </header>
+<body>
+  <header><nav></nav></header>
   <main>
     <style>
  .infOK > div {
@@ -190,23 +185,25 @@
        <b>class</b><p>inf-c9</p>
       </div>
     </div>
-      
+     
     <!-- HTML пример -->
-    <pre id="cod" class="ram-n0 all-c5" data-ram-zag="HTML"><code class="v-BG0">
-      &lt;!-- Добавить в &lt;head>..&lt;/head> -->
-      &lt;link href="https://zam.usite.pro/db/publ/tooltipCSS/ok_1-0-0.css" rel="stylesheet"><!-- Вид `Всплывающая подсказка` -->
-      &lt;!-- Всплывающая подсказка -->
-      &lt;dl class="inf-TL inf-c4" data-t="Пример появления • Верх лево">Наведи на меня мышку&lt;/dl>
-      </code></pre>
+    <pre class="ram-n0 all-c5" data-ram-zag="HTML" id="cod"><code class="v-BG0">
+    &lt;!-- Добавить в &lt;head>..&lt;/head>: -->
+    &lt;link href="https://zam.usite.pro/db/publ/tooltipCSS/m_1-0-0.css" rel="stylesheet"><!-- Вид `Всплывающая подсказка` -->
+    </code></pre>
+    
+    <!-- HTML пример -->
+    <pre class="ram-n0 all-c5" data-ram-zag="HTML" id="cod"><code class="v-BG0">
+    &lt;!-- Установим `Всплывающая подсказка`: -->
+    &lt;dl class="inf-TL inf-c4" data-t="Пример появления • Верх лево">Наведи на меня мышку&lt;/dl>
+    </code></pre>
   </main>
   <footer></footer>
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      $('#font').on('change', function () {
-        gl.font.$(this);
-        z.z.Start.$();
-      });
+      gl.$();//Запуск инструментов (bg,resize,menu...)
+      z.z.Start.$();
     }, false);
   </script>
 </body>
