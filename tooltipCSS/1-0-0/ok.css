@@ -8,7 +8,6 @@
 [class*="inf-"],
 [class*="inf-"]::before,
 [class*="inf-"]::after {
-    --C-:#0000; /* transparent */
     position: relative;
     margin: 0;
     padding: 0;
