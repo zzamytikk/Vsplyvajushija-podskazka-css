@@ -7,14 +7,14 @@
         /* ✦✦✦ * ✦✦✦ *//* #region */
 [class*="inf-"],
 [class*="inf-"]::before,
-[class*="inf-"]::after {
+[class*="inf-"]::after {/* Помогает интеграции на любой сайт */
     position: relative;
     margin: 0;
     padding: 0;
     border: 0;
     outline: 0;
     box-sizing: border-box;
-    font-size: 1rem
+    font-size: inherit
 }
         /* ✦✦✦ * ✦✦✦ *//* #endregion */
 
@@ -25,6 +25,7 @@
     ---inf-b-shI: var(---inf-b-sh);/* Цвет тени внутри контенера */
     display: inline-block;
     cursor: auto;
+    font-size: 1rem;
     box-sizing: border-box;
 }
 
