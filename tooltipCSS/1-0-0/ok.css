@@ -14,15 +14,16 @@
     border: 0;
     outline: 0;
     box-sizing: border-box;
+    line-height: 1.1;
     font-size: inherit
 }
         /* ✦✦✦ * ✦✦✦ *//* #endregion */
 
 [class*="inf-"] {
-    ---inf-C: var(---inf-C);/* Цвет текста */
-    ---inf-bg: var(---inf-bg-93);/* Цвет фона */
-    ---inf-br: var(---inf-C);/* border 1px (Рамка + Стрелка) */
-    ---inf-b-shI: var(---inf-b-sh);/* Цвет тени внутри контенера */
+    --inf-C: var(--inf-C);/* Цвет текста */
+    --inf-bg: var(--inf-bg-93);/* Цвет фона */
+    --inf-br: var(--inf-C);/* border 1px (Рамка + Стрелка) */
+    --inf-b-shI: var(--inf-b-sh);/* Цвет тени внутри контенера */
     display: inline-block;
     cursor: auto;
     font-size: 1rem;
@@ -48,16 +49,15 @@
     padding: 4px;/* Поля вокруг текста */
     text-align: center;/* Расположение текста */
     font-size: .875rem;/* Размер текста */
-    line-height: 1.1432;/* Устанавливает интерлиньяж (межстрочный интервал) текста, отсчет ведется от базовой линии шрифта. */
     font-weight: 400;/* Толщина текста */
     letter-spacing: .067rem;/* Отступ между буквами */
     box-sizing: unset;/* определяет как вычисляется общая ширина и высота элемента. */
-    color: var(---inf-C);/* Цвет текста */
-    background: var(---inf-bg);/* Цвет фона */
-    border: 1px solid var(---inf-br);/* Параметры рамки */
+    color: var(--inf-C);/* Цвет текста */
+    background: var(--inf-bg);/* Цвет фона */
+    border: 1px solid var(--inf-br);/* Параметры рамки */
     border-radius: 4px;/* Скругления уголков рамки */
     text-shadow: 1px 1px 1px #000;/* Параметры тени текста */
-    box-shadow: 0 0 4px #000, inset 0 0 1px var(---inf-b-shI) /* Параметры тени,  Параметры тени внутри */
+    box-shadow: 0 0 4px #000, inset 0 0 1px var(--inf-b-shI) /* Параметры тени,  Параметры тени внутри */
 }
 
         /* ✦✦✦ :hover ✦✦✦ *//* #region */
@@ -98,7 +98,7 @@
 
 .inf-R::before {/* Право */
     right: -11px;
-    border-right-color: var(---inf-br)
+    border-right-color: var(--inf-br)
 }
 
 .inf-R::after {
@@ -107,7 +107,7 @@
 
 .inf-L::before {/* Лево */
     left:-11px;
-    border-left-color: var(---inf-br)
+    border-left-color: var(--inf-br)
 }
 
 .inf-L::after {
@@ -129,7 +129,7 @@
 
 [class*="inf-T"]::before {/* Верх */
     top: -11px;
-    border-top-color: var(---inf-br)
+    border-top-color: var(--inf-br)
 }
 [class*="inf-T"]::after {/* .inf-T .inf-TR .inf-TL */
     bottom: calc(100% + 11px)
@@ -137,7 +137,7 @@
 
 [class*="inf-B"]::before {/* inf-B, inf-BL, inf-BR*/
     bottom: -12px;
-    border-bottom-color: var(---inf-br)
+    border-bottom-color: var(--inf-br)
 }
 [class*="inf-B"]::after {/* inf-B, inf-BL, inf-BR*/
     top: calc(100% + 12px)
@@ -175,18 +175,18 @@
 }
 
 .inf-BL::before {
-    border-left-color: var(---inf-br);
+    border-left-color: var(--inf-br);
     border-bottom: #0000
 }
 .inf-TL::before {
-    border-left-color: var(---inf-br)
+    border-left-color: var(--inf-br)
 }
 
 .inf-TR::before  {
-    border-right-color: var(---inf-br)
+    border-right-color: var(--inf-br)
 }
 .inf-BR::before {
-    border-right-color: var(---inf-br);
+    border-right-color: var(--inf-br);
     border-bottom: #0000
 }
 
@@ -198,56 +198,56 @@
 
     /* ✦✦ .inf-c.. Цвета ✦✦ *//* #region */
 .inf-c0 {/*0~> Красный */
-    ---inf-C: #f44;
-    ---inf-bg-93: #200e;
-    ---inf-b-sh: #f448;
+    --inf-C: #f44;
+    --inf-bg-93: #200e;
+    --inf-b-sh: #f448;
 }
 .inf-c1 {/*1~> Зелёный */
-    ---inf-C: #0b0;
-    ---inf-bg-93: #020e;
-    ---inf-b-sh: #0b06;
+    --inf-C: #0b0;
+    --inf-bg-93: #020e;
+    --inf-b-sh: #0b06;
 }
 .inf-c2 {/*2~> Оранжевый */
-    ---inf-C: #f90;
-    ---inf-bg-93: #210e;
-    ---inf-b-sh: #f906;
+    --inf-C: #f90;
+    --inf-bg-93: #210e;
+    --inf-b-sh: #f906;
 }
 .inf-c3 {/*3~> Жёлтый */
-    ---inf-C: #dd0;
-    ---inf-bg-93: #220e;
-    ---inf-b-sh: #dd09;
+    --inf-C: #dd0;
+    --inf-bg-93: #220e;
+    --inf-b-sh: #dd09;
 }
 .inf-c4 {/*4~> Синий */
-    ---inf-C: #08f;
-    ---inf-bg-93: #012e;
-    ---inf-b-sh: #08f6;
+    --inf-C: #08f;
+    --inf-bg-93: #012e;
+    --inf-b-sh: #08f6;
 }
 .inf-c5 {/*5~> Серый */
-    ---inf-C: #999;
-    ---inf-bg-93: #222e;
-    ---inf-b-sh: #8886;
+    --inf-C: #999;
+    --inf-bg-93: #222e;
+    --inf-b-sh: #8886;
 }
 .inf-c6 {/*6~> Розовый */
-    ---inf-C: #f0f;
-    ---inf-bg-93: #202e;
-    ---inf-b-sh: #f0f6;
+    --inf-C: #f0f;
+    --inf-bg-93: #202e;
+    --inf-b-sh: #f0f6;
 }
 .inf-c7 {/*7~> Океан */
-    ---inf-C: #0bb;
-    ---inf-bg-93: #022e;
-    ---inf-b-sh: #0bb6;
+    --inf-C: #0bb;
+    --inf-bg-93: #022e;
+    --inf-b-sh: #0bb6;
 }
 .inf-c8 {/*8~> Белый */
-    ---inf-C: #fff;
-    ---inf-bg-93: #012e;
-    ---inf-b-sh: #8886;
-    ---inf-br: #ccc;
+    --inf-C: #fff;
+    --inf-bg-93: #012e;
+    --inf-b-sh: #8886;
+    --inf-br: #ccc;
 }
 .inf-c9 {/* Чёрный */
-    ---inf-C: #ddd;
-    ---inf-bg-93: #012e;
-    ---inf-b-sh: #999;
-    ---inf-br: #000;
+    --inf-C: #ddd;
+    --inf-bg-93: #012e;
+    --inf-b-sh: #999;
+    --inf-br: #000;
 }
     /* ✦✦ .inf-c.. Цвета ✦✦ *//* #endregion */
 /* ✦ Всплывающая подсказка css (tooltip) 1.0.0 ✦ *//* #endregion */
