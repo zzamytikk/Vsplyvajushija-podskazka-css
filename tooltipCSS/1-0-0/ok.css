@@ -22,7 +22,7 @@
 [class*="inf-"] {
     --inf-C: var(--inf-C);/* Цвет текста */
     --inf-bg: var(--inf-bg-93);/* Цвет фона */
-    --inf-br: var(--inf-C);/* border 1px (Рамка + Стрелка) */
+    --inf-br: var(--inf-C);/* border 1px Рамка + Стрелка */
     --inf-b-shI: var(--inf-b-sh);/* Цвет тени внутри контенера */
     display: inline-block;
     cursor: auto;
@@ -247,7 +247,7 @@
     --inf-C: #ddd;
     --inf-bg-93: #012e;
     --inf-b-sh: #999;
-    --inf-br: #000;
+    --inf-br: #222;/* border 1px Рамка + Стрелка */
 }
     /* ✦✦ .inf-c.. Цвета ✦✦ *//* #endregion */
 /* ✦ Всплывающая подсказка css (tooltip) 1.0.0 ✦ *//* #endregion */
