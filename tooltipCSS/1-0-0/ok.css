@@ -61,13 +61,6 @@
 }
 
         /* ✦✦✦ :hover ✦✦✦ *//* #region */
-[class*="inf-"]:hover::before,
-[class*="inf-"]:hover::after {
-    opacity: 1;/* Показываем подсказку */
-    transform: translate(0, 0);
-    transition: .3s;/* Время появления подсказки */
-}
-
 [class*="inf-"]:hover::after {
     content: attr(data-t);/* Выводим текст ! Использавать тут ! (уберает полосу прокрутки, когда подсказка скрыта и не помещается) */
     min-width: 100px;/* Минимальная ширина подсказки ! Использавать тут ! (уберает полосу прокрутки, когда подсказка скрыта и не помещается) */
@@ -78,15 +71,15 @@
         padding: 4px
     }
 }
+
+[class*="inf-"]:hover::before,
+[class*="inf-"]:hover::after {
+    opacity: 1;/* Показываем подсказку */
+    transform: translate(0, 0);
+    transition: .3s;/* Время появления подсказки */
+}
         /* ✦✦✦ :hover ✦✦✦ *//* #endregion */
     /* ✦✦ ! ✦✦ *//* #endregion */
-
-    /* ✦✦ Открыть/Закрыть .inf-(X|O) ✦✦ *//* #region */
-.inf-XO::after {/* Закрыто */
-    content: 'Открыть/Закрыть' !important;
-    color: #bfb
-}
-    /* ✦✦ Открыть/Закрыть .inf-(X|O) ✦✦ *//* #endregion */
 
     /* ✦✦ Рамка + стрелка ✦✦ *//* #region */
         /* ✦✦✦ Лево|Право class=.inf-(L|R) ✦✦✦ *//* #region */
