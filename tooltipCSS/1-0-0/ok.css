@@ -7,7 +7,7 @@
         /* ✦✦✦ * ✦✦✦ *//* #region */
 [class*="inf-"],
 [class*="inf-"]::before,
-[class*="inf-"]::after {/* Помогает интеграции на любой сайт */
+[class*="inf-"]::after {/* Помогает интеграции */
     position: relative;
     margin: 0;
     padding: 0;
