@@ -15,6 +15,7 @@
     outline: 0;
     box-sizing: border-box;
     line-height: 1.1;
+    font-size: inherit;/* уравнивает все элементы */
 }
         /* ✦✦✦ * ✦✦✦ *//* #endregion */
 
@@ -25,7 +26,7 @@
     --inf-b-shI: var(--inf-b-sh);/* Цвет тени внутри контенера */
     display: inline-block;
     cursor: auto;
-    font-size: 1rem;
+    font-size: 1rem;/* html */
     box-sizing: border-box;
 }
 
