@@ -2,12 +2,64 @@
     ✫ Версия 1.0.0
     © Copyright Плюшки для сайтов 2023
 */
+
+[class*="all-c0"] {/*0~> */
+    --all-C: #f44;
+    --all-bg-93: #200e;
+    --all-b-sh: #f448;
+}
+[class*="all-c1"] {/*1~> */
+    --all-C: #0b0;
+    --all-bg-93: #020e;
+    --all-b-sh: #0b06;
+}
+[class*="all-c2"] {/*2~> */
+    --all-C: #f90;
+    --all-bg-93: #210e;
+    --all-b-sh: #f909;
+}
+[class*="all-c3"] {/*3~> */
+    --all-C: #dd0;
+    --all-bg-93: #220e;
+    --all-b-sh: #dd09;
+}
+[class*="all-c4"] {/*4~> */
+    --all-C: #08f;
+    --all-bg-93: #012e;
+    --all-b-sh: #08f6;
+}
+[class*="all-c5"] {/*5~> */
+    --all-C: #999;
+    --all-bg-93: #222e;
+    --all-b-sh: #8886;
+}
+[class*="all-c6"] {/*6~> */
+    --all-C: #f0f;
+    --all-bg-93: #202e;
+    --all-b-sh: #f0f6;
+}
+[class*="all-c7"] {/*7~> */
+    --all-C: #0bb;
+    --all-bg-93: #022e;
+    --all-b-sh: #0bb6;
+}
+[class*="all-c8"] {/*8~> Белый */
+  --all-C: #333;
+  --all-bg-93: #222e;
+  --all-b-sh: #3336;
+}
+[class*="inf-"].all-c8 {/*8~> Белый Корекция цвета */
+  --all-C: #ddd;
+}
+.temaT .all-c8[class*="inf-"] {/* 9 Чёрный. Для белого фона */
+  --all-C: #ccc;
+  --all-bg-93: #222e;
+  --all-b-sh: #ccc6;
+}
 /* ✦ Всплывающая подсказка css (tooltip) 1.0.0 ✦ *//* #region */
     /* ✦✦ ! ✦✦ *//* #region */
         /* ✦✦✦ * ✦✦✦ *//* #region */
-[class*="inf-"],
-[class*="inf-"]::before,
-[class*="inf-"]::after {/* Помогает интеграции */
+[class*="inf-"],[class*="inf-"]::before,[class*="inf-"]::after {/* Помогает интеграции */
     position: relative;
     margin: 0;
     padding: 0;
@@ -20,10 +72,10 @@
         /* ✦✦✦ * ✦✦✦ *//* #endregion */
 
 [class*="inf-"] {
-    --inf-C: var(--inf-C);/* Цвет текста */
-    --inf-bg: var(--inf-bg-93);/* Цвет фона */
-    --inf-br: var(--inf-C);/* border 1px Рамка + Стрелка */
-    --inf-b-shI: var(--inf-b-sh);/* Цвет тени внутри контенера */
+    --inf-C: var(--all-C);/* Цвет текста */
+    --inf-bg: var(--all-bg-93);/* Цвет фона */
+    --inf-br: var(--all-C);/* border 1px Рамка + Стрелка */
+    --inf-b-shI: var(--all-b-sh);/* Цвет тени внутри контенера */
     display: inline-block;
     cursor: auto;
     font-size: 1rem;/* html */
@@ -188,59 +240,4 @@
 }
         /* ✦✦✦ Право(Низ|Верх) class="inf-(BR|TR)", Лево(Низ|Верх) = class="inf-(BL|TL)" ✦✦✦ *//* #endregion */
     /* ✦✦ Рамка + стрелка ✦✦ *//* #endregion */
-
-    /* ✦✦ .inf-c.. Цвета ✦✦ *//* #region */
-.inf-c0 {/*0~> Красный */
-    --inf-C: #f44;
-    --inf-bg-93: #200e;
-    --inf-b-sh: #f448;
-}
-.inf-c1 {/*1~> Зелёный */
-    --inf-C: #0b0;
-    --inf-bg-93: #020e;
-    --inf-b-sh: #0b06;
-}
-.inf-c2 {/*2~> Оранжевый */
-    --inf-C: #f90;
-    --inf-bg-93: #210e;
-    --inf-b-sh: #f906;
-}
-.inf-c3 {/*3~> Жёлтый */
-    --inf-C: #dd0;
-    --inf-bg-93: #220e;
-    --inf-b-sh: #dd09;
-}
-.inf-c4 {/*4~> Синий */
-    --inf-C: #08f;
-    --inf-bg-93: #012e;
-    --inf-b-sh: #08f6;
-}
-.inf-c5 {/*5~> Серый */
-    --inf-C: #999;
-    --inf-bg-93: #222e;
-    --inf-b-sh: #8886;
-}
-.inf-c6 {/*6~> Розовый */
-    --inf-C: #f0f;
-    --inf-bg-93: #202e;
-    --inf-b-sh: #f0f6;
-}
-.inf-c7 {/*7~> Океан */
-    --inf-C: #0bb;
-    --inf-bg-93: #022e;
-    --inf-b-sh: #0bb6;
-}
-.inf-c8 {/*8~> Белый */
-    --inf-C: #fff;
-    --inf-bg-93: #012e;
-    --inf-b-sh: #8886;
-    --inf-br: #ccc;
-}
-.inf-c9 {/* Чёрный */
-    --inf-C: #ddd;
-    --inf-bg-93: #012e;
-    --inf-b-sh: #999;
-    --inf-br: #222;/* border 1px Рамка + Стрелка */
-}
-    /* ✦✦ .inf-c.. Цвета ✦✦ *//* #endregion */
 /* ✦ Всплывающая подсказка css (tooltip) 1.0.0 ✦ *//* #endregion */
