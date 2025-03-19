@@ -78,8 +78,6 @@
     --inf-b-shI: var(--all-b-sh);/* Цвет тени внутри контенера */
     display: inline-block;
     cursor: auto;
-    font-size: 1rem;/* html */
-    box-sizing: border-box;
 }
 
 [class*="inf-"]::before,
@@ -100,7 +98,7 @@
     max-width: 170px;/* Максимальная ширина подсказки */
     padding: 4px;/* Поля вокруг текста */
     text-align: center;/* Расположение текста */
-    font-size: .875em;/* Размер текста */
+    font-size: .875rem;/* Размер текста */
     font-weight: 400;/* Толщина текста */
     letter-spacing: .067em;/* Отступ между буквами */
     box-sizing: unset;/* определяет как вычисляется общая ширина и высота элемента. */
