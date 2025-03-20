@@ -38,44 +38,44 @@
     </div></div> 
     
     <style>
- .infOK > div {
- width: 150px;/* Для оденакого центрования */
- /* border: 1px solid #fff3 */
- min-height: 50px;
- }
-
- /* Покажем */
- .infOK [class*="inf-"]::after,
- .infOK [class*="inf-"]::before {z-index: 1;
- opacity: 1;
- }
- .infOK [class*="inf-"]::after {
- content: attr(data-t);
- }
- /* Центруем */
- .infOK [class*="inf-"] {
- position: absolute;
- }
- .infOK :is([class*="inf-T"]) {
- top: 115%;
- }
- .infOK [class*="inf-B"] {
- top: 25%;
- }
- .infOK :is([class*="inf-R"], [class*="inf-L"]) {
- top: 50%;
- }
-
- .infOK :is([class*="inf-TR"], [class*="inf-BR"], .inf-L) {
- left: 90%;
- }
- .infOK :is(.inf-T, .inf-B) {
- left: 50%;
- }
- .infOK :is([class*="inf-TL"], [class*="inf-BL"], .inf-R){
- left: 15%;
- }
- </style>
+   .infOK > div {
+   width: 150px;/* Для оденакого центрования */
+   /* border: 1px solid #fff3 */
+   min-height: 50px;
+   }
+  
+   /* Покажем */
+   .infOK [class*="inf-"]::after,
+   .infOK [class*="inf-"]::before {z-index: 1;
+   opacity: 1;
+   }
+   .infOK [class*="inf-"]::after {
+   content: attr(data-t);
+   }
+   /* Центруем */
+   .infOK [class*="inf-"] {
+   position: absolute;
+   }
+   .infOK :is([class*="inf-T"]) {
+   top: 115%;
+   }
+   .infOK [class*="inf-B"] {
+   top: 25%;
+   }
+   .infOK :is([class*="inf-R"], [class*="inf-L"]) {
+   top: 50%;
+   }
+  
+   .infOK :is([class*="inf-TR"], [class*="inf-BR"], .inf-L) {
+   left: 90%;
+   }
+   .infOK :is(.inf-T, .inf-B) {
+   left: 50%;
+   }
+   .infOK :is([class*="inf-TL"], [class*="inf-BL"], .inf-R){
+   left: 15%;
+   }
+   </style>
     <!-- ✂ Цветовой набор -->
     <div class="ram-n1-1 ram-V1-1X infOK">
        <div>
@@ -106,10 +106,6 @@
        <dl class="inf-T all-c8" data-t="inf-T all-c8"></dl>
        </div>
        </div>
-     
-    <div class="ram-V0 ram-V2 gI-inf all-c2"><div>
-      Для светлого и тёмного фона!
-    </div></div>
 
     <h4 class="hr-n1 hr-L" style="--hr-lin: var(--Ct)"><b>Добавим (html, css) подсказку:</b></h4>
     <p>Для создания подсказки в HTML добавим к нужному элементу пользовательский атрибут <span class="cod-scb">data-t = </span><span class="cod-atr">"Текст подсказки"</span> с текстом подсказки.</p>
@@ -202,8 +198,10 @@
     </code></div></pre>
     <b style="color:red">►</b> Исходники(css): <a href="https://github.com/zzamytikk/Vsplyvajushija-podskazka-css/tree/main/tooltipCSS/1-0-0" target="_blank">github</a> <i style="opacity:.4">(m. - Сокращённый вариант, ok. - Подробный)</i>
     
-    <h4 class="hr-n1 hr-L all-c7"><b>Для тёмного сайта:</b></h4>
-    <!-- HTML пример -->
+    <!--  -->
+    <div class="ram-V0 ram-V2 gI-inf all-c2"><div>
+      Для тёмного дизайна сайта, необходимо добавить <u class="u-n0 all-c1">class="temaT"</u>
+    </div></div>
     <pre id="zCod" class="ram-n0 all-c5" data-ram-zag="HTML"><div><div></div><code class="v-BG0">
     &lt;!-- Необходимо добавить в body class="temaT" -->
     &lt;body class="temaT">
