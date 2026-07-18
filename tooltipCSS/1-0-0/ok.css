@@ -45,9 +45,11 @@
   --all-b-sh: #0bb6;
 }
 [class*="all-c8"] {/* Чёрный - Для белого фона/Белый - Для тёмного фона */
-  --all-C: light-dark(#ddd, #ccc);
   --all-bg-93: #222e;
   --all-b-sh: light-dark(#3336, #ccc6);
+}
+[class*="inf-"].all-c8 {
+  --all-C: light-dark(#ddd, #ccc);
 }
 /* ✦ --all- .all-c.. Цвета ✦ *//* #endregion */
 
