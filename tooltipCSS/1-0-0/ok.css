@@ -4,47 +4,47 @@
 */
 
 /* ✦ --all-.. .all-c.. Цвета ✦ *//* #region */
-[class*="all-c0"] {
+.all-c0 {
   --all-C: #f44;
   --all-bg-93: #200e;
   --all-b-sh: #f448;
 }
-[class*="all-c1"] {
+.all-c1 {
   --all-C: #0b0;
   --all-bg-93: #020e;
   --all-b-sh: #0b06;
 }
-[class*="all-c2"] {
+.all-c2 {
   --all-C: #f90;
   --all-bg-93: #210e;
   --all-b-sh: #f909;
 }
-[class*="all-c3"] {
+.all-c3 {
   --all-C: #dd0;
   --all-bg-93: #220e;
   --all-b-sh: #dd09;
 }
-[class*="all-c4"] {
+.all-c4 {
   --all-C: #08f;
   --all-bg-93: #012e;
   --all-b-sh: #08f6;
 }
-[class*="all-c5"] {
+.all-c5 {
   --all-C: #999;
   --all-bg-93: #222e;
   --all-b-sh: #8886;
 }
-[class*="all-c6"] {
+.all-c6 {
   --all-C: #f0f;
   --all-bg-93: #202e;
   --all-b-sh: #f0f6;
 }
-[class*="all-c7"] {
+.all-c7 {
   --all-C: #0bb;
   --all-bg-93: #022e;
   --all-b-sh: #0bb6;
 }
-[class*="all-c8"] {/* Чёрный - Для белого фона/Белый - Для тёмного фона */
+.all-c8 {/* Чёрный - Для белого фона/Белый - Для тёмного фона */
   --all-bg-93: #222e;
   --all-b-sh: light-dark(#3336, #ccc6);
 }
